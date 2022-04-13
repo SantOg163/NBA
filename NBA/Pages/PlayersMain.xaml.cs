@@ -81,7 +81,7 @@ namespace NBA.Pages
 
         private void Search_TextChanged(object sender, TextChangedEventArgs e)
         {
-            var currentPlayers = _allPlayers.FindAll(p => p.Player.Player.Name.ToLower().Contains(Search.Text.ToLower()) && p.Player.Team.TeamName == comboTeams.Text).OrderBy(p => Convert.ToInt32(p.Player.ShirtNumber)).ToList();
+            var currentPlayers = _allPlayers.FindAll(p => p.Player.Player.Name.ToLower().Contains(Search.Text.ToLower()) && (p.Player.Team.TeamName == comboTeams.Text || string.IsNullOrEmpty( comboTeams.Text))).OrderBy(p => Convert.ToInt32(p.Player.ShirtNumber)).ToList();
             DGridPlayers.ItemsSource = currentPlayers.Take(_top10);
         }
 
