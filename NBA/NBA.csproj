@@ -236,9 +236,6 @@
     <Resource Include="Images\Zone.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Pages\Zone.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Images\Players\266.jpg" />
     <Resource Include="Images\Players\267.jpg" />
     <Resource Include="Images\Players\268.jpg" />

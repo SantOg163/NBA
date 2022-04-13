@@ -55,7 +55,7 @@
 
             <TabItem Header="Lineup" Width="102">
                 <Grid>
-                    <Image Source="/Pages/Zone.jpg"/>
+                    <Image Source="/Images/Zone.jpg"/>
                     <Grid HorizontalAlignment="Left" Margin="50,0,0,0">
                         <Label Content="PF" HorizontalContentAlignment="Center" Height="30"  Width="35" Margin="-200,-100,0,0"  Foreground="#FF6995C2"  Background="#FFD8D409" Panel.ZIndex="2"/>
                         <ListView x:Name="PF" Height="90" Width="220" Background="LightGray">
