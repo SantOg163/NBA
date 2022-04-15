@@ -8,13 +8,16 @@ using System.Windows.Media.Imaging;
 
 namespace NBA.Models
 {
-    internal class AnonimMatchUp
+    public class AnonimMatchUp
     {
         public Matchup Matchup { get; set; }
         public string Status { get; set; }
         public SolidColorBrush color { get; set; }
         public Team awayTeam { get; set; }
         public Team homeTeam { get; set; }
+        public AnonimTeam anonimAwayTeam { get; set; }
+        public AnonimTeam anonimHomeTeam { get; set; }
+
 
         public AnonimMatchUp(Matchup matchup)
         {
@@ -29,7 +32,6 @@ namespace NBA.Models
                 Status = "Not Start";
                 color= new SolidColorBrush(Color.FromRgb(105, 149, 194));
             }
-            var aTeam = matchup.Team_Away;
         }
     }
 }

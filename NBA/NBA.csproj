@@ -81,6 +81,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\MatchupDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\MatchupMain.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -112,6 +116,7 @@
     <Compile Include="Models\AnonimPlayer.cs" />
     <Compile Include="Models\ActionType.cs" />
     <Compile Include="Models\Admin.cs" />
+    <Compile Include="Models\AnonimTeam.cs" />
     <Compile Include="Models\Conference.cs" />
     <Compile Include="Models\Country.cs" />
     <Compile Include="Models\Division.cs" />
@@ -132,6 +137,9 @@
     <Compile Include="Models\Team.cs" />
     <Compile Include="Pages\Main.xaml.cs">
       <DependentUpon>Main.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MatchupDetail.xaml.cs">
+      <DependentUpon>MatchupDetail.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\MatchupMain.xaml.cs">
       <DependentUpon>MatchupMain.xaml</DependentUpon>
