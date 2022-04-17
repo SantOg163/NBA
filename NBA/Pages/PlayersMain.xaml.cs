@@ -181,7 +181,7 @@ namespace NBA.Pages
 
         private void PlayerName_Click(object sender, RoutedEventArgs e)
         {
-
+            Manager.MainFrame.Navigate(new PlayerDetail((sender as Button).DataContext as PlayerStatistics));
         }
     }
 }

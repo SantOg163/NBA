@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using NBA.Models;
 
 namespace NBA.Pages
 {
@@ -20,9 +21,11 @@ namespace NBA.Pages
     /// </summary>
     public partial class PlayerDetail : Page
     {
-        public PlayerDetail()
+        public PlayerDetail(PlayerStatistics selectedPlayer)
         {
             InitializeComponent();
+            Name.Content = selectedPlayer.Player.Name;
+           
         }
     }
 }
