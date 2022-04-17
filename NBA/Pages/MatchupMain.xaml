@@ -29,7 +29,7 @@
                         </StackPanel>
                         <Image Source="{Binding homeTeam.Logo}" HorizontalAlignment="Right" Width="60" Height="60" Margin="70,0,11,0"/>
                         <StackPanel>
-                            <Label Content="{Binding awayTeam.TeamName}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,10,11,0" FontSize="13" Foreground="CornflowerBlue"/>
+                            <Label Content="{Binding homeTeam.TeamName}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,10,11,0" FontSize="13" Foreground="CornflowerBlue"/>
                             <Label Content=" (Home)" Margin="0,-10,0,0" FontSize="13" Foreground="CornflowerBlue"/>
                         </StackPanel>
                     </StackPanel>

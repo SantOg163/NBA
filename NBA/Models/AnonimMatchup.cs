@@ -8,18 +8,16 @@ using System.Windows.Media.Imaging;
 
 namespace NBA.Models
 {
-    public class AnonimMatchUp
+    public class AnonimMatchup
     {
         public Matchup Matchup { get; set; }
         public string Status { get; set; }
         public SolidColorBrush color { get; set; }
         public Team awayTeam { get; set; }
         public Team homeTeam { get; set; }
-        public AnonimTeam anonimAwayTeam { get; set; }
-        public AnonimTeam anonimHomeTeam { get; set; }
 
 
-        public AnonimMatchUp(Matchup matchup)
+        public AnonimMatchup(Matchup matchup)
         {
             Matchup = matchup;
             if (matchup.Status == 1)

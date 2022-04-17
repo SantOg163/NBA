@@ -23,7 +23,7 @@ namespace NBA.Pages
     {
         private Team _currentTeam;
         private static List<AnonimPlayer> _anonimPlayers = new List<AnonimPlayer>();           
-        private static List<AnonimMatchUp> _anonimMatchups = new List<AnonimMatchUp>();
+        private static List<AnonimMatchup> _anonimMatchups = new List<AnonimMatchup>();
         public TeamDetail(Team team, int index)
         {
             InitializeComponent();
@@ -48,7 +48,7 @@ namespace NBA.Pages
 
 
             for (int i = 0; i < MatchupContent.Count; i++)
-                _anonimMatchups.Add(new AnonimMatchUp(MatchupContent[i]));
+                _anonimMatchups.Add(new AnonimMatchup(MatchupContent[i]));
             
             DGridRoster.ItemsSource= _anonimPlayers.Where(p => p.Player.Season.Name == comboSeason.Text);
             DGridMatchup.ItemsSource = _anonimMatchups.Where(p => p.Matchup.Season.Name == comboSeason.Text).OrderBy(d=>d.Matchup.Starttime);  

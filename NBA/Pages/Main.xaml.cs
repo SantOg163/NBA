@@ -34,6 +34,7 @@ namespace NBA.Pages
 
         private void btnVisitor_Click(object sender, RoutedEventArgs e)
         {
+           
             Manager.MainFrame.Navigate(new VisitorMenu());
         }
 

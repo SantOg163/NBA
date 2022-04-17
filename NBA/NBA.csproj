@@ -44,6 +44,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Xml" />
@@ -116,7 +117,6 @@
     <Compile Include="Models\AnonimPlayer.cs" />
     <Compile Include="Models\ActionType.cs" />
     <Compile Include="Models\Admin.cs" />
-    <Compile Include="Models\AnonimTeam.cs" />
     <Compile Include="Models\Conference.cs" />
     <Compile Include="Models\Country.cs" />
     <Compile Include="Models\Division.cs" />
@@ -250,6 +250,8 @@
     <Resource Include="Images\Players\269.jpg" />
     <Resource Include="Images\Players\272.jpg" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Images\court-transparent.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
