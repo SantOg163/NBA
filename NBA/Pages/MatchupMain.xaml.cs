@@ -58,10 +58,9 @@ namespace NBA.Pages
             MainDate.Text = $"{Convert.ToDateTime(MainDate.Text).AddDays(1):d}";
             LViewCurrentMatch.ItemsSource = new List<AnonimMatchup>() { _allMatchup.OrderBy(m => Convert.ToDateTime(MainDate.Text).Subtract(m.Matchup.Starttime)).ToList()[0] };
         }
-
         private void MainDate_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
         {
-            //LViewCurrentMatch.ItemsSource = new List<AnonimMatchUp>() { _allMatchup.OrderBy(m => Convert.ToDateTime(MainDate.SelectedDate).Subtract(m.Matchup.Starttime)).ToList()[0] };
+            //LViewCurrentMatch.ItemsSource = new List<AnonimMatchup>() { _allMatchup.OrderBy(m => Convert.ToDateTime(MainDate.SelectedDate).Subtract(m.Matchup.Starttime)).ToList()[0] };
         }
     }
 }

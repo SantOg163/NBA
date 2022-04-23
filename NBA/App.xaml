@@ -4,6 +4,13 @@
              xmlns:local="clr-namespace:NBA"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
+        <Style TargetType="DataGridRow">
+            <Style.Triggers>
+                <Trigger Property="DataGridRow.IsSelected" Value="True">
+                    <Setter Property="Background" Value="White" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
         <Style TargetType="DataGridColumnHeader">
             <Setter Property="HorizontalContentAlignment" Value="Center"/>
             <Setter Property="Height" Value="35"/>
@@ -16,6 +23,7 @@
             <Setter Property="VerticalScrollBarVisibility" Value="Hidden"/>
             <Setter Property="CanUserResizeColumns" Value="False"/>
             <Setter Property="CanUserResizeRows" Value="False"/>
+            <Setter Property="AutoGenerateColumns" Value="False"/>
         </Style>
         <Style TargetType="{x:Type DataGridCell}">
             <Setter Property="Template">
@@ -27,6 +35,12 @@
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
+            <Style.Triggers>
+                <Trigger Property="DataGridCell.IsSelected" Value="True">
+                    <Setter Property="Background" Value="White" />
+                    <Setter Property="Foreground" Value="Black"/>
+                </Trigger>
+            </Style.Triggers>
         </Style>
         <Style TargetType="ListView" x:Key="TeamsList">
             <Setter Property="ItemTemplate">

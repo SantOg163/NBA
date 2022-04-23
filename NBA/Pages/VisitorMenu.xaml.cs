@@ -45,7 +45,7 @@ namespace NBA.Pages
 
         private void btnPhotos_Click(object sender, RoutedEventArgs e)
         {
-
+            Manager.MainFrame.Navigate(new Photos());
         }
 
     }

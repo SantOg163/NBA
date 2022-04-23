@@ -78,7 +78,19 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\AdminLogin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\EventAdministratorMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\Main.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ManageSeason.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -87,6 +99,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\MatchupMain.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Photos.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -106,6 +122,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\TechnicalAdministratorMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\VisitorMenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -120,29 +140,44 @@
     <Compile Include="Models\Conference.cs" />
     <Compile Include="Models\Country.cs" />
     <Compile Include="Models\Division.cs" />
+    <Compile Include="Models\Log.cs" />
     <Compile Include="Models\Matchup.cs" />
     <Compile Include="Models\MatchupDetail.cs" />
     <Compile Include="Models\MatchupLog.cs" />
     <Compile Include="Models\MatchupType.cs" />
     <Compile Include="Models\NBAEntities.cs" />
+    <Compile Include="Models\GamePhotos.cs" />
     <Compile Include="Models\Pictures.cs" />
     <Compile Include="Models\Player.cs" />
     <Compile Include="Models\PlayerInTeam.cs" />
     <Compile Include="Models\PlayerStatistics.cs" />
     <Compile Include="Models\Position.cs" />
     <Compile Include="Models\PostSeason.cs" />
+    <Compile Include="Models\Remember.cs" />
     <Compile Include="Models\Role.cs" />
     <Compile Include="Models\Season.cs" />
     <Compile Include="Models\sysdiagrams.cs" />
     <Compile Include="Models\Team.cs" />
+    <Compile Include="Pages\AdminLogin.xaml.cs">
+      <DependentUpon>AdminLogin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EventAdministratorMenu.xaml.cs">
+      <DependentUpon>EventAdministratorMenu.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Main.xaml.cs">
       <DependentUpon>Main.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ManageSeason.xaml.cs">
+      <DependentUpon>ManageSeason.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\MatchupDetail.xaml.cs">
       <DependentUpon>MatchupDetail.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\MatchupMain.xaml.cs">
       <DependentUpon>MatchupMain.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Photos.xaml.cs">
+      <DependentUpon>Photos.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\PlayerDetail.xaml.cs">
       <DependentUpon>PlayerDetail.xaml</DependentUpon>
@@ -155,6 +190,9 @@
     </Compile>
     <Compile Include="Pages\TeamsMain.xaml.cs">
       <DependentUpon>TeamsMain.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TechnicalAdministratorMenu.xaml.cs">
+      <DependentUpon>TechnicalAdministratorMenu.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\VisitorMenu.xaml.cs">
       <DependentUpon>VisitorMenu.xaml</DependentUpon>
@@ -252,6 +290,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\court-transparent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\download.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

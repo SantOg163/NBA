@@ -14,29 +14,29 @@
         <StackPanel>
         <Label x:Name="Name" />
             <StackPanel Orientation="Horizontal">
-                <Label/>
-                <Label/>
-                <Label/>
+                <Label x:Name="ShirtNumber"/>
+                <Label x:Name="Height"/>
+                <Label x:Name="Team"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <StackPanel >
                 <StackPanel Orientation="Horizontal">
                     <Label Content="Born"/>
-                    <Label/>
+                    <Label x:Name="Born"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <Label Content="College"/>
-                    <Label/>
+                        <Label x:Name="College"/>
                 </StackPanel>
             </StackPanel>
             <StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <Label Content="Experience"/>
-                    <Label/>
+                        <Label x:Name="Experience"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <Label Content="Salary"/>
-                    <Label/>
+                        <Label x:Name="Salary"/>
                 </StackPanel>
             </StackPanel>
         </StackPanel>

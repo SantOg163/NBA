@@ -76,7 +76,7 @@
                     </DataGridTemplateColumn>
                     <DataGridTextColumn Binding="{Binding homeTeam.TeamName}" Foreground="CornflowerBlue" Width="120" FontSize="12"  />
                     <DataGridTextColumn Binding="{Binding Matchup.Location}" Foreground="CornflowerBlue" Width="140" FontSize="12"  />
-                <DataGridTemplateColumn Width="107" >
+                <DataGridTemplateColumn Width="80" >
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <Button Style="{StaticResource RoundButton}" Content="View" x:Name="btnView" Click="View_Click" FontSize="12" Width="60" Margin="0,0,1,0" HorizontalAlignment="Left"/>

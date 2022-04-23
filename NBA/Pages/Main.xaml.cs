@@ -40,7 +40,7 @@ namespace NBA.Pages
 
         private void btnAdmin_Click(object sender, RoutedEventArgs e)
         {
-
+            Manager.MainFrame.Navigate(new AdminLogin());
         }
 
         private void Grid_Loaded(object sender, RoutedEventArgs e)

@@ -84,7 +84,7 @@
             <Label x:Name="ofPosition" Width="40" FontSize="12" HorizontalAlignment="Left" Margin="105,0,0,0" />
             <Button x:Name="btnNext" Content="&gt;" Width="20" HorizontalAlignment="Left" Margin="160,0,0,0" Click="btnNext_Click" Foreground="#FF6995C2"  FontSize="15" Style="{StaticResource NameButton}"/>
             <Button x:Name="btnLast" Content="&gt;&gt;" Width="40" HorizontalAlignment="Left" Margin="180,0,0,0" Click="btnLast_Click" Foreground="#FF6995C2" FontSize="15" Style="{StaticResource NameButton}"/>
-            <Label Content="Total XX records , YY records in one page" FontSize="12" HorizontalContentAlignment="Center" Width="200"/>
+            <Label x:Name="Total" Content="Total XX records , YY records in one page" FontSize="12" HorizontalContentAlignment="Center" Width="300"/>
         </Grid>
     </Grid>
 </Page>

@@ -12,21 +12,27 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using NBA.Models;
 
 namespace NBA.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для PlayerDetail.xaml
+    /// Логика взаимодействия для TechnicalAdministratorMenu.xaml
     /// </summary>
-    public partial class PlayerDetail : Page
+    public partial class TechnicalAdministratorMenu : Page
     {
-        public PlayerDetail(PlayerStatistics selectedPlayer)
+        public TechnicalAdministratorMenu()
         {
             InitializeComponent();
-            Name.Content = selectedPlayer.Player.Name;
-            ShirtNumber.Content = $" | {selectedPlayer.Player.PlayerInTeam.Select(s => s.ShirtNumber)} | ";
-            Team.Content = $"{selectedPlayer.Player.PlayerInTeam.Select(t=>t.Team.TeamName)}";
+        }
+
+        private void btnExecutions_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnReport_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
