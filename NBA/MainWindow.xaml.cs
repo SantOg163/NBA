@@ -47,18 +47,22 @@ namespace NBA
            else
                 Manager.MainFrame.GoBack();
         }
-
+        //изменил код после добавления кнопки logout т.к. Main page слетал 
         private void MainFrame_Navigated(object sender, NavigationEventArgs e)
         {
             if (e.Content is Main page)
+            {
+                Tools.Visibility= Visibility.Hidden;
+                MainFrame.Margin = new Thickness(0);
                 return;
+            }
             else
             {
                 Tools.Visibility = Visibility.Visible;
-                MainFrame.Margin= new Thickness(0,70,0,0);
+                MainFrame.Margin = new Thickness(0, 70, 0, 0);
             }
-            //if(e.Content is Main || e.Content is VisitorMenu)
-
+            if (e.Content is EventAdministratorMenu || e.Content is TechnicalAdministratorMenu || e.Content is ManageSeason || e.Content is ManageTeams || e.Content is ManagePlayers || e.Content is ManageMatchups)
+                btnLogout.Visibility = Visibility.Visible;
         }
         private void Grid_Loaded(object sender, RoutedEventArgs e)
         {
@@ -82,6 +86,14 @@ namespace NBA
             //if(e.Content is Main || e.Content is VisitorMenu)
 
 
+        }
+
+        private void btnLogout_Click(object sender, RoutedEventArgs e)
+        {
+            while(Manager.MainFrame.CanGoBack)
+                Manager.MainFrame.GoBack();
+            btnBack_Click(null, null);
+            btnLogout.Visibility=Visibility.Hidden;
         }
     }
 }

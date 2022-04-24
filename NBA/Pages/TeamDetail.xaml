@@ -12,7 +12,8 @@
         <Image x:Name="Logo" Height="60" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,-10,0,0"/>
         <Label x:Name="Name" Margin="100,10,0,0"/>
             <ComboBox x:Name="comboSeason" Width="120" Height="20" Margin="350,55,-100,0"  DisplayMemberPath="Name" HorizontalAlignment="Left" VerticalAlignment="Top" Panel.ZIndex="2"/>
-            <Button Content="Search" x:Name="Search" Click="Search_Click" Style="{StaticResource RoundButton}"  Width="50" Height="20" Margin="480,55,-100,0" VerticalAlignment="Top" Panel.ZIndex="2" HorizontalAlignment="Left"/>
+            
+        <Button Content="Search" x:Name="Search" Click="Search_Click" Style="{StaticResource RoundButton}"  Width="50" Height="20" Margin="480,55,-100,0" VerticalAlignment="Top" Panel.ZIndex="2" HorizontalAlignment="Left"/>
 
         <TabControl Height="355" Width="950" Margin="15,0,15,-5" VerticalAlignment="Center">
             <TabItem Header="Roster" Width="102" Height="27">

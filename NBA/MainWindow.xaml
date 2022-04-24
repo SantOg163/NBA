@@ -11,10 +11,11 @@
             <Grid Height="71" VerticalAlignment="Top" Margin="1">
                 <Image Source="Images\logo.jpg" Height="40" HorizontalAlignment="Left" />
                 <Label Content="NBA Managment System" Margin="20"/>
+                <Button Content="Logout" x:Name="btnLogout" Style="{StaticResource RoundButton}" Click="btnLogout_Click" HorizontalAlignment="Right" Visibility="Hidden" Margin="0,0,100,0"/>
                 <Button Content="Back" x:Name="btnBack" Style="{StaticResource RoundButton}" Click="btnBack_Click" HorizontalAlignment="Right" Margin="20"/>
             </Grid>
         </Border>
-        <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" ContentRendered="MainFrame_ContentRendered" Margin="0,0,0,23" />
+        <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden"  Margin="0,0,0,23" Navigated="MainFrame_Navigated" />
         <Label Width="auto" x:Name="Blue" Height="23" VerticalAlignment="Bottom" 
                HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom" Foreground="White" FontSize="12"/>
     </Grid>

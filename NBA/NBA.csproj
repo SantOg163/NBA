@@ -78,6 +78,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\AddMatchup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\AdminLogin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -90,7 +94,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\ManageMatchups.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ManagePlayers.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\ManageSeason.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ManageTeams.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -158,6 +174,9 @@
     <Compile Include="Models\Season.cs" />
     <Compile Include="Models\sysdiagrams.cs" />
     <Compile Include="Models\Team.cs" />
+    <Compile Include="Pages\AddMatchup.xaml.cs">
+      <DependentUpon>AddMatchup.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\AdminLogin.xaml.cs">
       <DependentUpon>AdminLogin.xaml</DependentUpon>
     </Compile>
@@ -167,8 +186,17 @@
     <Compile Include="Pages\Main.xaml.cs">
       <DependentUpon>Main.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\ManageMatchups.xaml.cs">
+      <DependentUpon>ManageMatchups.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ManagePlayers.xaml.cs">
+      <DependentUpon>ManagePlayers.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\ManageSeason.xaml.cs">
       <DependentUpon>ManageSeason.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ManageTeams.xaml.cs">
+      <DependentUpon>ManageTeams.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\MatchupDetail.xaml.cs">
       <DependentUpon>MatchupDetail.xaml</DependentUpon>

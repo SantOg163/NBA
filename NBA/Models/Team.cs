@@ -44,6 +44,7 @@ namespace NBA.Models
         [StringLength(50)]
         public string Logo { get; set; }
 
+
         public virtual Division Division { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

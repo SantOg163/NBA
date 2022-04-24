@@ -29,8 +29,6 @@ namespace NBA.Pages
             for (int i = 0; i < NBAEntities.GetContext().Matchup.ToList().Count; i++)
             {
                 _allMatchup.Add(new AnonimMatchup(NBAEntities.GetContext().Matchup.ToList()[i]));
-                _allMatchup[i].homeTeam = NBAEntities.GetContext().Team.ToList().Where(t => t.TeamId == _allMatchup[i].Matchup.Team_Home).ToList().First();
-                _allMatchup[i].awayTeam = NBAEntities.GetContext().Team.ToList().Where(t => t.TeamId == _allMatchup[i].Matchup.Team_Away).ToList().First();
                 if(!_allMatchup[i].homeTeam.Logo.Contains("\\Images\\Logo\\"))
                 _allMatchup[i].homeTeam.Logo = _allMatchup[i].homeTeam.Logo.Insert(0, "\\Images\\Logo\\");
                 if (!_allMatchup[i].awayTeam.Logo.Contains("\\Images\\Logo\\"))

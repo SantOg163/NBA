@@ -20,6 +20,8 @@ namespace NBA.Models
         public AnonimMatchup(Matchup matchup)
         {
             Matchup = matchup;
+            homeTeam = NBAEntities.GetContext().Team.ToList().Where(t => t.TeamId == Matchup.Team_Home).ToList().First();
+            awayTeam = NBAEntities.GetContext().Team.ToList().Where(t => t.TeamId == Matchup.Team_Away).ToList().First();
             if (matchup.Status == 1)
             {
                 Status = "Finished";

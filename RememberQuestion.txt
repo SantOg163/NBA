@@ -1,0 +1,1 @@
+It will be better to store the data in a text document on the local computer or on the sql server ?

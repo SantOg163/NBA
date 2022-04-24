@@ -28,11 +28,9 @@ namespace NBA.Pages
         {
             InitializeComponent();
             if(team != null)
-            {
                 _currentTeam = team;
+            
                 comboSeason.SelectedIndex = index;
-
-            }
 
 
             Name.Content = $"{_currentTeam.TeamName} | {_currentTeam.Division.Name} of {_currentTeam.Division.Conference.Name}";
@@ -63,7 +61,15 @@ namespace NBA.Pages
 
         private void Search_Click(object sender, RoutedEventArgs e)
         {
-            Manager.MainFrame.Navigate(new TeamDetail(_currentTeam, comboSeason.SelectedIndex));
+
+            DGridRoster.ItemsSource = _anonimPlayers.Where(p => p.Player.Season.Name == comboSeason.Text);
+            DGridMatchup.ItemsSource = _anonimMatchups.Where(p => p.Matchup.Season.Name == comboSeason.Text).OrderBy(d => d.Matchup.Starttime);
+            PF.ItemsSource = NBAEntities.GetContext().PlayerInTeam.Where(p => p.TeamId == _currentTeam.TeamId && p.Player.Position.Abbr == "PF " && p.Season.Name == comboSeason.Text).OrderBy(p => p.StarterIndex).Distinct().ToList();
+            SG.ItemsSource = NBAEntities.GetContext().PlayerInTeam.Where(p => p.TeamId == _currentTeam.TeamId && p.Player.Position.Abbr == "SG " && p.Season.Name == comboSeason.Text).OrderBy(p => p.StarterIndex).Distinct().ToList();
+            C.ItemsSource = NBAEntities.GetContext().PlayerInTeam.Where(p => p.TeamId == _currentTeam.TeamId && p.Player.Position.Abbr == "C  " && p.Season.Name == comboSeason.Text).OrderBy(p => p.StarterIndex).Distinct().ToList();
+            PG.ItemsSource = NBAEntities.GetContext().PlayerInTeam.Where(p => p.TeamId == _currentTeam.TeamId && p.Player.Position.Abbr == "PG " && p.Season.Name == comboSeason.Text).OrderBy(p => p.StarterIndex).Distinct().ToList();
+            SF.ItemsSource = NBAEntities.GetContext().PlayerInTeam.Where(p => p.TeamId == _currentTeam.TeamId && p.Player.Position.Abbr == "SF " && p.Season.Name == comboSeason.Text).OrderBy(p => p.StarterIndex).Distinct().ToList();
+
         }
     }
 }

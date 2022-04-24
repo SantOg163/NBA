@@ -32,17 +32,17 @@ namespace NBA.Pages
 
         private void btnMatchups_Click(object sender, RoutedEventArgs e)
         {
-
+            Manager.MainFrame.Navigate(new ManageMatchups(2,DateTime.Now,false));
         }
 
         private void btnTeams_Click(object sender, RoutedEventArgs e)
         {
-
+            Manager.MainFrame.Navigate(new ManageTeams());
         }
 
         private void btnPlayers_Click(object sender, RoutedEventArgs e)
         {
-
+            Manager.MainFrame.Navigate(new ManagePlayers());
         }
     }
 }
