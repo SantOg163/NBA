@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:NBA.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="450" d:DesignWidth="1000"
       Title="ManageTeams">
 
     <Grid Background="White">
@@ -27,15 +27,15 @@
                 <DataGridTemplateColumn>
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Image Source="{Binding team.Logo}" Height="55"/>
+                            <Image Height="55" Width="55" Source="{Binding Logo}" />
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
-                <DataGridTextColumn Header="Name" Binding="{Binding team.TeamName}" Width="*"/>
-                <DataGridTextColumn Header="Conference" Binding="{Binding team.Division.Conference.Name}" Width="*"/>
-                        <DataGridTextColumn Header="Division" Binding="{Binding team.Division.Name}"  Width="*"/>
-                        <DataGridTextColumn Header="Coach" Binding="{Binding team.Coach}"  Width="*"/>
-                        <DataGridTextColumn Header="TotalSalary($ Million)" Binding="{Binding totalSalary}"  Width="*"/>
+                <DataGridTextColumn Header="Name" Binding="{Binding TeamName}" Width="*"/>
+                <DataGridTextColumn Header="Conference" Binding="{Binding Division.Conference.Name}" Width="*"/>
+                        <DataGridTextColumn Header="Division" Binding="{Binding Division.Name}"  Width="*"/>
+                        <DataGridTextColumn Header="Coach" Binding="{Binding Coach}"  Width="*"/>
+                        <DataGridTextColumn Header="TotalSalary($ Million)" Binding="{Binding TotalSalary}"  Width="*"/>
             </DataGrid.Columns>
         </DataGrid>                
             </StackPanel>
