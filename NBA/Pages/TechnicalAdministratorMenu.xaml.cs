@@ -23,17 +23,17 @@ namespace NBA.Pages
         public TechnicalAdministratorMenu()
         {
             InitializeComponent();
-            MessageBox.Show("The feature would be a future add-on to the current system", "Manage Executions – Future Add-on");
         }
 
         private void btnExecutions_Click(object sender, RoutedEventArgs e)
         {
+            MessageBox.Show("The feature would be a future add-on to the current system", "Manage Executions – Future Add-on");
 
         }
 
         private void btnReport_Click(object sender, RoutedEventArgs e)
         {
-
+            Manager.MainFrame.Navigate(new TeamReport());
         }
     }
 }

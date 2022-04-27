@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>NBA</RootNamespace>
     <AssemblyName>NBA</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
@@ -41,6 +41,9 @@
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -135,6 +138,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\TeamReport.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\TeamsMain.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -157,7 +164,6 @@
     <Compile Include="Models\Conference.cs" />
     <Compile Include="Models\Country.cs" />
     <Compile Include="Models\Division.cs" />
-    <Compile Include="Models\Log.cs" />
     <Compile Include="Models\Matchup.cs" />
     <Compile Include="Models\MatchupDetail.cs" />
     <Compile Include="Models\MatchupLog.cs" />
@@ -170,7 +176,6 @@
     <Compile Include="Models\PlayerStatistics.cs" />
     <Compile Include="Models\Position.cs" />
     <Compile Include="Models\PostSeason.cs" />
-    <Compile Include="Models\Remember.cs" />
     <Compile Include="Models\Role.cs" />
     <Compile Include="Models\Season.cs" />
     <Compile Include="Models\sysdiagrams.cs" />
@@ -216,6 +221,9 @@
     </Compile>
     <Compile Include="Pages\TeamDetail.xaml.cs">
       <DependentUpon>TeamDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TeamReport.xaml.cs">
+      <DependentUpon>TeamReport.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\TeamsMain.xaml.cs">
       <DependentUpon>TeamsMain.xaml</DependentUpon>

@@ -13,7 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using NBA.Models;
-using System.IO;                                                                                        
+using System.IO;
+using Newtonsoft.Json;
 
 namespace NBA.Pages
 {
@@ -26,12 +27,14 @@ namespace NBA.Pages
         public AdminLogin()
         {
             InitializeComponent();
-            if(Models.Remember.GetContext().Log.ToList().Count != 0)
-                Remember.IsChecked = true;
-            if (Remember.IsChecked == true)
+            if (File.Exists("Login.txt"))
             {
-                Jobnumber.Text = Models.Remember.GetContext().Log.ToList()[0].Jobnumber;
-                Password.Password = Models.Remember.GetContext().Log.ToList()[0].Password;
+                Remember.IsChecked = true;
+                using(StreamReader sr = new StreamReader("Login.txt"))
+                {
+                    Jobnumber.Text = sr.ReadLine();
+                    Password.Password = sr.ReadLine();
+                }
             }
         }
 
@@ -42,33 +45,29 @@ namespace NBA.Pages
 
         private void Login_Click(object sender, RoutedEventArgs e)
         {
-            _currentAdmin = NBAEntities.GetContext().Admin.Where(a=>a.Jobnumber==Jobnumber.Text && a.Passwords==Password.Password).FirstOrDefault();
-            if(_currentAdmin == null)
+            _currentAdmin = NBAEntities.GetContext().Admin.Where(a => a.Jobnumber == Jobnumber.Text && a.Passwords == Password.Password).FirstOrDefault();
+            if (_currentAdmin == null)
             {
                 MessageBox.Show("Неверно введен логин или пароль");
-                    return;
+                return;
             }
             if (Remember.IsChecked == true)
-            {
                 Remember_Checked();
-            }
             else
-            {
-                if (Models.Remember.GetContext().Log.ToList().Count != 0)
-                    Models.Remember.GetContext().Log.Remove(Models.Remember.GetContext().Log.ToList()[0]);
-                Models.Remember.GetContext().SaveChanges();
-            }
-                if (_currentAdmin.RoleId == "1")
-                    Manager.MainFrame.Navigate(new EventAdministratorMenu());
-                else
-                    Manager.MainFrame.Navigate(new TechnicalAdministratorMenu());
-            }
+                File.Delete("Login.txt");
+            if (_currentAdmin.RoleId == "1")
+                Manager.MainFrame.Navigate(new EventAdministratorMenu());
+            else
+                Manager.MainFrame.Navigate(new TechnicalAdministratorMenu());
+        }
 
         private void Remember_Checked()
         {
-            if (Models.Remember.GetContext().Log.ToList().Count == 0)
-                Models.Remember.GetContext().Log.Add(new Log() { Jobnumber = Jobnumber.Text, Password = Password.Password});
-                Models.Remember.GetContext().SaveChanges();
+            using(StreamWriter sw = new StreamWriter("Login.txt"))
+            {
+                sw.WriteLine($"{Jobnumber.Text}");
+                sw.WriteLine($"{Password.Password}");
+            }
         }
     }
 }
