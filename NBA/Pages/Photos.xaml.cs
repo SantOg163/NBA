@@ -16,6 +16,7 @@ using System.Windows.Shapes;
 using System.IO;
 using NBA.Models;
 using Microsoft.Win32;
+using System.Drawing.Imaging;
 
 namespace NBA.Pages
 {
@@ -90,7 +91,6 @@ namespace NBA.Pages
                 Position.Text = $"{Convert.ToInt32(Position.Text) - 1}";
             }
         }
-
         private void btnNext_Click(object sender, RoutedEventArgs e)
         {
             if (_top3 < _count)
@@ -151,14 +151,17 @@ namespace NBA.Pages
         }
         private void Download_Click(object sender, RoutedEventArgs e)
         {
-            //SaveFileDialog save = new SaveFileDialog();
-            //save.DefaultExt = "JPG Files (*.jpg)|*.jpg";
-            //save.FileName = "photo";
-            //JpegBitmapEncoder jpegBitmapEncoder = new JpegBitmapEncoder();
-            //jpegBitmapEncoder.Frames.Add(BitmapFrame.Create(new Uri((sender as BitmapImage).UriSource.ToString())));
-            //using (FileStream fs = new FileStream(save.SafeFileName, FileMode.Create))
-            //    jpegBitmapEncoder.Save(fs);
-            //save.ShowDialog();
+            SaveFileDialog save = new SaveFileDialog();
+            save.DefaultExt = ".jpg";
+            save.Filter = "JPG Files (*.jpg)|*.jpg";
+            save.FileName = "photo";
+            JpegBitmapEncoder jpegBitmapEncoder = new JpegBitmapEncoder();
+            jpegBitmapEncoder.Frames.Add(BitmapFrame.Create(new Uri(_allPhotos[DGridPhotos.SelectedIndex].Photo1.ToString())));
+            using (FileStream fs = new FileStream(save.SafeFileName, FileMode.Create))
+            {
+                jpegBitmapEncoder.Save(fs);
+            }
+            save.ShowDialog();
         }
     }
 }
